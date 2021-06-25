@@ -74,5 +74,13 @@ router.post("/:id", (req, res, next) => {
     });
 });
 router.get("/delete/:id", (req, res, next) => {
+    let id = req.params.id;
+    books_1.default.deleteOne({ _id: id }, {}, (err) => {
+        if (err) {
+            console.log(err);
+            res.end(err);
+        }
+        res.redirect("/books");
+    });
 });
 //# sourceMappingURL=books.js.map
