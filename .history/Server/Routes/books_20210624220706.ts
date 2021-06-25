@@ -50,7 +50,7 @@ router.post("/add", (req, res, next) => {
       console.log(err);
       return res.end(err);
     }
-    res.redirect("/books");
+    return res.render("books/index");
   });
 });
 
@@ -59,16 +59,10 @@ router.get("/:id", (req, res, next) => {
   /*****************
    * ADD CODE HERE *
    *****************/
-  book.findById({ _id: req.params.id }, (err, book) => {
-    if (err) {
-      console.error(err);
-      res.end(err);
-    }
-    res.render("books/details", {
-      title: "Edit a Book",
-      page: "details",
-      books: book,
-    });
+  res.render("books/details", {
+    title: "Edit a Book",
+    page: "details",
+    books: book.find({ _id: req.body.id }),
   });
 });
 

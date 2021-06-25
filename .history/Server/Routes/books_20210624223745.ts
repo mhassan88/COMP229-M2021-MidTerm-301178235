@@ -60,10 +60,6 @@ router.get("/:id", (req, res, next) => {
    * ADD CODE HERE *
    *****************/
   book.findById({ _id: req.params.id }, (err, book) => {
-    if (err) {
-      console.error(err);
-      res.end(err);
-    }
     res.render("books/details", {
       title: "Edit a Book",
       page: "details",
