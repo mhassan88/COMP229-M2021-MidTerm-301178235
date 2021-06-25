@@ -85,13 +85,13 @@ router.post("/:id", (req, res, next) => {
     Author: req.body.author,
     Genre: req.body.genre,
   });
-  book.updateOne({ _id: id }, updatedBook, {}, (err) => {
+  book.updateOne({ _id: id }, updatedBook, {}, (err, res) => {
     if (err) {
       console.log(err);
       res.end(err);
     }
-    res.redirect("/books");
   });
+  res.redirect("/books");
 });
 
 // GET - process the delete by user id
