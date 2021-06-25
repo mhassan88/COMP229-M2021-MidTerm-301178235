@@ -1,4 +1,4 @@
-/**File Name: index.ts
+/**File Name: server.js
  * Author Name: Muhammad Hassan
  * Student ID: 301178235
  * Favourite Books App

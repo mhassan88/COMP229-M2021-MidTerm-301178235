@@ -45,7 +45,6 @@ router.post("/add", (req, res, next) => {
   /*****************
    * ADD CODE HERE *
    *****************/
-  //creating new book object to pass to create function
   let newBook = new book({
     Title: req.body.title,
     Price: req.body.price,
@@ -85,7 +84,6 @@ router.post("/:id", (req, res, next) => {
    * ADD CODE HERE *
    *****************/
   let id = req.params.id;
-  //creating book object to pass to update function
   let updatedBook = new book({
     _id: id,
     Title: req.body.title,

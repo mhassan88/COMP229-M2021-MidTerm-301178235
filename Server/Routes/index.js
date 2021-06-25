@@ -6,11 +6,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const router = express_1.default.Router();
 exports.default = router;
-router.get('/', (req, res, next) => {
-    res.render('content/index', {
-        title: 'Home',
-        page: 'home',
-        books: ''
+router.get("/", (req, res, next) => {
+    res.render("content/index", {
+        title: "Home",
+        page: "home",
+        books: "",
     });
 });
 //# sourceMappingURL=index.js.map

@@ -10,10 +10,10 @@ const BookSchema = new Schema({
     Description: String,
     Price: Number,
     Author: String,
-    Genre: String
+    Genre: String,
 }, {
-    collection: "books"
+    collection: "books",
 });
-const Model = mongoose_1.default.model('Book', BookSchema);
+const Model = mongoose_1.default.model("Book", BookSchema);
 exports.default = Model;
 //# sourceMappingURL=books.js.map
